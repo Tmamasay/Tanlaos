@@ -37,6 +37,22 @@ export default {
     return {
     }
   },
+  methods:{
+ onGotUserInfo: function(e) {
+      // 调用登录接口
+      if(!e.target.userInfo){
+        return false;
+        console.log('用户拒绝授权');
+      }
+      //调用登录接口
+
+      //存放用户信息
+       this.$store.dispatch('GetUserInfo',e.target.userInfo);
+          wx.navigateBack({
+                    delta: 2
+            })
+ }
+  },
 
   created () {
     // let key_token=this.$store.getters.user.token
