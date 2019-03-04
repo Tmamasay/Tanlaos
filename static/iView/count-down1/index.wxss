@@ -1,0 +1,13 @@
+.countdownClass11{
+width:17px;
+height:16px;
+background:rgba(0,0,0,1);
+opacity:1;
+font-size:17rpx;
+font-family:PingFang SC;
+font-weight:400;
+padding:2px 3px;
+/* margin-left: 3px; */
+margin:0 3px;
+color:rgba(255,255,255,1);
+}

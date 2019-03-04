@@ -1,0 +1,5 @@
+<!--<text class="countdown-class">
+  {{time}}
+</text>-->
+<text class="countdownClass11">{{timeH}}</text>:<text class="countdownClass11">{{timeM}}</text>:<text class="countdownClass11">{{timeS}}</text>
+
