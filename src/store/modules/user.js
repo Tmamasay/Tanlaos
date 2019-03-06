@@ -1,5 +1,5 @@
 // import { loginByUsername, logout, getUserInfo } from '@/api/login'
-import { getToken, setToken, removeToken } from '@/utils/auth'
+import { getToken, setToken, removeToken,setUserinfo,getUserinfo } from '@/utils/auth'
 
 const user = {
   state: {
@@ -68,10 +68,12 @@ const user = {
     // 获取用户信息
     GetUserInfo({ commit,state},e) {
       // debugger;
-      console.log('存取用户信息')
-      commit('SET_USERINFO', e)
-      commit('SET_NAME', e.nickName)
-      commit('SET_AVATAR', e.avatarUrl)
+      console.log('存取用户信息====>到本地缓存')
+      setUserinfo(e)
+      // const info=getUserinfo();
+      // commit('SET_USERINFO', getUserinfo())
+      // commit('SET_NAME', info.nickName)
+      // commit('SET_AVATAR', info.avatarUrl)
       //假设的token
       commit('SET_TOKEN', state.token)
       console.log(state.avatar)

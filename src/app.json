@@ -3,6 +3,9 @@
     "pages/index/main",
     "pages/learn/main",
     "pages/mine/main",
+    "pages/mine/phone/main",
+    "pages/mine/eyes/main",
+    "pages/mine/about/main",
     "pages/counter/main",
     "pages/shouquan/main"
   ],

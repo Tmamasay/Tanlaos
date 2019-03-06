@@ -26,8 +26,6 @@
 </template>
 
 <script>
-// import { formatTime } from '@/utils/index'
-
 export default {
   components: {
     // card
@@ -45,7 +43,6 @@ export default {
         console.log('用户拒绝授权');
       }
       //调用登录接口
-
       //存放用户信息
        this.$store.dispatch('GetUserInfo',e.target.userInfo);
           wx.navigateBack({

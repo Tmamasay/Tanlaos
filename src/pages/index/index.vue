@@ -2,10 +2,10 @@
   <div>
    <div class="head">
      <div class="head_left">
-       <img v-if="avatarUrl" :src="avatarUrl" alt="" srcset="">
+       <img v-if="userInfo" :src="userInfo.avatarUrl" alt="" srcset="">
      </div>
      <div class="head_middle">
-       <p class="title">{{nickName}}</p>
+       <p class="title">{{userInfo.nickName}}</p>
        <p class="nianji">{{motto}}</p>
      </div>
      <div class="head_right">切换年级</div>
@@ -54,21 +54,18 @@ export default {
   data () {
     return {
       motto: '3年级',
-      // userInfo: {
-      //   nickName:'' ,
-      //   avatarUrl:'' 
-      // }
+      userInfo: ''
     }
   },
  computed:{
-   avatarUrl(){
-     console.log('-----kaishi')
-     console.log(this.$store.getters.avatar)
-    return this.$store.getters.avatar;
-   },
-   nickName(){
-     return this.$store.getters.name;
-   }
+  //  avatarUrl(){
+  //    console.log('-----kaishi')
+  //    console.log(this.$store.getters.avatar)
+  //   return this.$store.getters.avatar;
+  //  },
+  //  nickName(){
+  //    return this.$store.getters.name;
+  //  }
  
   },
   components: {
@@ -90,7 +87,7 @@ export default {
     if (mpvuePlatform === 'wx') {
       console.log('------------------>')
       user_token = mpvue.getStorageSync('Admin-Token');
-     
+      this.userInfo=mpvue.getStorageSync('user_info');
     if(!user_token){
       console.log('-------去授权----------->')
        wx.navigateTo({
@@ -230,7 +227,7 @@ export default {
   font-family:PingFang SC;
   text-align:left;
   color: #787B86;
-  margin-top: 5px
+  margin-top: 8px
 }
 .course_price_t1{
   color: #EF3F4E;

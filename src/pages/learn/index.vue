@@ -8,7 +8,7 @@
           <img src="../../../static/images/learn/book.png" alt="" srcset="">
         </div>
         <p class="con_t">暂无正在学习的课程</p>
-        <div class="goadd">添加新课程</div>
+        <div class="goadd">+添加新课程</div>
      </div>
   </div>
 </template>
@@ -50,7 +50,7 @@ export default {
 .con_img{
   width: 270px;
   height: 240px;
-  margin: 30px auto;
+  margin: 35px auto;
 
 }
 .con_img img{
