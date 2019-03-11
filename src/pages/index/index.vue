@@ -1,6 +1,6 @@
 <template>
   <div>
-   <div class="head">
+   <div class="head" >
      <div class="head_left">
        <img v-if="userInfo" :src="userInfo.avatarUrl" alt="" srcset="">
      </div>
@@ -10,7 +10,7 @@
      </div>
      <div class="head_right">切换年级</div>
    </div>
-   <div class="showBg">
+   <div class="showBg" @click="godetail()">
      <img src="../../../static/images/index/banner.png" alt="" srcset="">
       <button class="godetail">了解课程</button>
    </div>
@@ -73,6 +73,11 @@ export default {
   },
 
   methods: {
+    godetail(){
+       wx.navigateTo({
+            url: '/pages/index/bannerdetail/main',   //注意switchTab只能跳转到带有tab的页面，不能跳转到不带tab的页面
+        })
+    }
     
   },
 

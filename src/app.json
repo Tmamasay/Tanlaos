@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/main",
+    "pages/index/bannerdetail/main",
     "pages/learn/main",
     "pages/mine/main",
     "pages/mine/phone/main",
